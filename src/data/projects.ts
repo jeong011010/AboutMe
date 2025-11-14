@@ -226,24 +226,58 @@ export const projects: Project[] = [
   {
     id: 'climbmate',
     name: 'ClimbMate',
-    description: '클라이밍 문제 분석 AI 웹서비스',
-    overview: '클라이밍 문제를 분석하는 AI 웹서비스입니다. FastAPI와 React를 활용하여 풀스택 애플리케이션으로 개발했으며, 학술제에 출품했습니다.',
-    tech: ['React', 'TypeScript', 'FastAPI', 'Python'],
+    description: 'AI 기반 클라이밍 문제 분석 웹서비스',
+    overview: '볼더링 벽 사진만 찍으면 AI가 홀드를 감지하고, 문제를 분류하고, 난이도와 유형을 분석하는 웹서비스입니다. YOLOv8-seg로 홀드를 자동 감지하고, CLIP AI로 색상을 분류하며, GPT-4 Vision으로 한국어 분석 결과를 제공합니다. FastAPI + Celery + Redis를 활용한 비동기 처리와 실시간 진행률 표시를 구현했습니다.',
+    tech: ['React', 'TypeScript', 'FastAPI', 'Python', 'Celery', 'Redis', 'YOLOv8', 'CLIP', 'GPT-4'],
     github: 'https://github.com/jeong011010/climbmate-ai',
     demo: 'https://climbmate.store',
     color: 'from-blue-500 to-cyan-500',
     period: '2025.01 - 2025.11',
     team: '개인 프로젝트',
-    role: '프론트엔드 개발',
+    role: '풀스택 개발',
     contributions: [
-      'React + TypeScript 기반 프론트엔드 개발',
-      'FastAPI 백엔드와의 API 연동',
-      'AI 분석 결과 시각화 UI 구현',
+      'React + TypeScript 기반 프론트엔드 개발 및 PWA 모바일 최적화',
+      'FastAPI 백엔드 아키텍처 설계 및 API 엔드포인트 구현',
+      'Celery + Redis를 활용한 비동기 작업 큐 시스템 구축',
+      'YOLOv8-seg 모델을 활용한 홀드 자동 감지 기능 구현',
+      'CLIP AI 모델을 활용한 10가지 색상 자동 분류 기능 구현',
+      'GPT-4 Vision API 통합 및 한국어 분석 결과 생성',
+      '실시간 진행률 표시를 위한 폴링 시스템 구현',
+      'SQLite 데이터베이스 설계 및 피드백 시스템 구현',
+    ],
+    keyFeatures: [
+      {
+        title: 'AI 기반 홀드 감지 및 색상 분석',
+        description: 'YOLOv8-seg 모델을 활용하여 볼더링 벽 사진에서 홀드를 자동으로 감지하고, CLIP AI 모델로 10가지 색상(red, blue, green, yellow, purple, pink, gray, brown, white, black)을 정확하게 분류합니다. 같은 색상 홀드끼리 자동 그룹화하여 최소 3개 이상의 홀드로 구성된 문제를 인식합니다.',
+      },
+      {
+        title: '비동기 처리 및 실시간 진행률 표시',
+        description: 'FastAPI + Celery + Redis를 활용한 비동기 작업 큐 시스템을 구축하여 AI 모델 처리 시간이 오래 걸리는 작업을 백그라운드에서 처리합니다. 폴링 방식을 통해 사용자에게 세분화된 진행률(0% → 10% → 30% → 50% → 70% → 95% → 100%)을 실시간으로 표시하여 사용자 경험을 개선했습니다.',
+      },
+      {
+        title: 'GPT-4 Vision 기반 문제 분석',
+        description: 'GPT-4 Vision API를 통합하여 각 문제별로 난이도(V0-V10), 유형(dynamic, static, crimp, sloper, balance 등), 상세 분석, 실용적 팁을 한국어로 제공합니다. 홀드 간격, 크기, 배치를 기반으로 기술적 분석과 코어 활용, 모멘텀 사용 등 구체적인 조언을 제공합니다.',
+      },
     ],
     achievements: [
       '학술제 출품',
-      'AI 기반 클라이밍 문제 분석',
+      'YOLO + CLIP + GPT-4 통합 AI 시스템 구축',
+      '비동기 작업 큐 시스템으로 안정적인 백그라운드 처리',
+      'PWA 모바일 최적화 및 오프라인 캐싱',
+      '실시간 진행률 표시로 사용자 경험 개선',
     ],
+    architecture: {
+      description: '브라우저에서 이미지를 업로드하면 FastAPI 서버가 작업을 Celery 큐에 등록하고, Celery Worker가 YOLO + CLIP + GPT-4를 순차적으로 실행하여 분석 결과를 생성합니다. Redis를 브로커로 사용하여 작업 상태를 관리하고, 프론트엔드는 폴링 방식으로 진행률을 확인합니다. SQLite 데이터베이스에 분석 결과와 사용자 피드백을 저장합니다.',
+      diagram: '/images/projects/climbmate/climbmate 아키텍처.png',
+    },
+    images: {
+      screenshots: [
+        '/images/projects/climbmate/climbmate 서비스화면 - 1.png',
+        '/images/projects/climbmate/climbmate 서비스화면 - 2.png',
+        '/images/projects/climbmate/climbmate 서비스화면 - 3.png',
+      ],
+      architecture: '/images/projects/climbmate/climbmate 아키텍처.png',
+    },
   },
 ]
 
