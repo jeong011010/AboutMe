@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
-import { FaGithub, FaBlog, FaEnvelope, FaLinkedin } from 'react-icons/fa'
-import { HiMail, HiPhone } from 'react-icons/hi'
+import { FaGithub, FaBlog, FaEnvelope } from 'react-icons/fa'
+import { HiMail } from 'react-icons/hi'
 
 const Contact = () => {
   const contactInfo = [
