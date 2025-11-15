@@ -96,6 +96,7 @@ export const projects: Project[] = [
       },
     ],
     images: {
+      logo: '/images/projects/오늘순밥/오늘순밥-logo.png',
       heroSlides: [
         '/images/projects/오늘순밥/오늘순밥 카드뉴스-1.jpeg',
         '/images/projects/오늘순밥/오늘순밥 카드뉴스-2.jpeg',
@@ -168,6 +169,7 @@ export const projects: Project[] = [
       diagram: '/images/projects/wedit/wedit-fe 아키텍쳐.png',
     },
     images: {
+      logo: '/images/projects/wedit/wedit logo.png',
       heroSlides: [
         '/images/projects/wedit/wedit프로젝트배경.png',
         '/images/projects/wedit/wedit 핵심기능 소개.png',
@@ -224,6 +226,107 @@ export const projects: Project[] = [
     },
   },
   {
+    id: 'chekirout',
+    name: 'Chekirout',
+    description: '2024 SCHU 학술제 출석체크 앱 개발 경진대회 최우수상 수상작',
+    overview: '2024년 순천향대학교 공대 학술제를 위한 출석체크 앱으로 개발된 서비스입니다. 학생들의 출석 관리를 효율적으로 할 수 있도록 QR 코드 기반 출석 체크 시스템을 구현했습니다. 위치 기반 인증과 1인 1디바이스 정책을 통해 위법 행위를 방지하고, 스탬프 시스템으로 참여도를 직관적으로 표시했습니다. 학술제 출석체크 앱 개발 경진대회에서 최우수상을 수상했습니다.',
+    tech: ['Java', 'Spring Boot', 'TypeScript', 'React'],
+    github: 'https://github.com/SCH2024-AcademicFestival-CheckInApp',
+    demo: '',
+    color: 'from-orange-500 to-red-500',
+    period: '2024.09 - 2024.10',
+    team: 'FE / BE / PM',
+    role: '백엔드 개발 / PM',
+    contributions: [
+      'Java + Spring Boot 기반 백엔드 개발',
+      'QR 코드 기반 출석 체크 시스템 구현',
+      '위치 기반 인증 시스템 구현',
+      '1인 1디바이스 인증 정책 구현',
+      '출석 데이터 관리 및 통계 기능 개발',
+      '경품 지급 기준 관리 시스템 개발',
+      '프로젝트 관리 및 팀 조율',
+    ],
+    keyFeatures: [
+      {
+        title: 'QR 코드 기반 출석 체크 시스템',
+        description: '프로그램 진행 장소에서 참가자들이 QR 코드로 출석을 체크하고, 특정 프로그램 참여를 기록하는 기능입니다. QR 코드는 사용자 정보와 연동되어 있어 간편하게 참여 여부를 확인할 수 있습니다.',
+      },
+      {
+        title: '위치 기반 인증 시스템',
+        description: '위치 기반 시스템을 도입하여 프로그램이 진행되는 공간에서만 QR 인증이 가능하도록 구현했습니다. 프로그램 진행 공간 외에서 QR 인증을 시도하면 참여 인정이 되지 않아, QR 사진을 퍼뜨려 인증을 시도하는 위법 행위를 방지합니다.',
+      },
+      {
+        title: '1인 1디바이스 정책',
+        description: '사용자가 회원가입을 진행한 디바이스에서만 로그인 가능하도록 구현했습니다. 다른 사람이 자신의 학번으로 로그인하여 대신 프로그램 출석을 하는 등의 위법 행위를 방지합니다.',
+      },
+      {
+        title: '스탬프 시스템',
+        description: '사용자가 참여한 프로그램 개수에 따라 홈 화면에서 스탬프를 받을 수 있습니다. 스탬프 디자인을 직접 제작했으며, 스탬프를 클릭하면 해당 스탬프가 어떤 프로그램 참여로 받은 것인지 확인할 수 있습니다.',
+      },
+      {
+        title: '경품 지급 기준 관리',
+        description: '프로그램에 참여한 사용자들에게 경품을 지급할 때, 경품 추첨을 하고 지급 대상자를 관리하는 기능입니다. 관리자는 무작위 추첨을 진행할 수 있고, 추첨에 선택된 학생과 일정 횟수의 프로그램을 진행하여 경품을 지급받을 수 있는 학생 모두 조회 및 관리가 가능합니다.',
+      },
+    ],
+    achievements: [
+      '2024 SCHU 학술제 출석체크 앱 개발 경진대회 최우수상 수상',
+      '학술제 출석 관리 시스템 제공',
+      '위치 기반 인증을 통한 위법 행위 방지',
+      '직관적인 스탬프 시스템 구현',
+    ],
+    architecture: {
+      description: 'Java + Spring Boot 기반 백엔드 아키텍처로 구현되었습니다. QR 코드 인증, 위치 기반 인증, 1인 1디바이스 정책 등을 구현하여 출석 체크 시스템의 신뢰성을 확보했습니다. 프론트엔드(React + TypeScript)와 백엔드 간의 RESTful API 통신을 통해 실시간 출석 데이터를 관리합니다.',
+      diagram: '/images/projects/체키라웃/체키라웃 백엔드 아키텍쳐.png',
+    },
+    images: {
+      logo: '/images/projects/체키라웃/체키라웃 logo.png',
+      heroSlides: [
+        '/images/projects/체키라웃/체키라웃 user flow.png',
+        '/images/projects/체키라웃/체키라웃 admin flow.png',
+      ],
+      architecture: '/images/projects/체키라웃/체키라웃 백엔드 아키텍쳐.png',
+    },
+  },
+  {
+    id: 'memory-page',
+    name: '기억의 페이지',
+    description: '졸업생들을 위한 온라인 롤링페이퍼 서비스',
+    overview: '졸업을 기념하는 한 페이지 한 페이지가 모두 소중한 기억이라는 의미로 졸업생들을 위한 온라인 롤링페이퍼를 제공하는 서비스입니다. 졸업생들이 친구들과 가족들로부터 축하 메시지와 사진을 받아 소중한 추억을 기록할 수 있도록 설계되었습니다.',
+    tech: ['React', 'TypeScript', 'FastAPI', 'Python'],
+    github: 'https://github.com/memory-page/memory-page-frontend',
+    demo: '',
+    color: 'from-purple-500 to-pink-500',
+    period: '2025.01',
+    team: 'FE 2 / BE 2',
+    role: '프론트엔드 개발',
+    contributions: [
+      'React + TypeScript 기반 프론트엔드 개발',
+      'FastAPI 백엔드와의 API 연동',
+      '롤링페이퍼 UI/UX 구현',
+      '이미지 업로드 및 미리보기 기능 구현',
+    ],
+    achievements: [
+      '졸업생들을 위한 롤링페이퍼 서비스 제공',
+      '온라인 기념 페이지 제작',
+    ],
+    images: {
+      logo: '/images/projects/기억의페이지/기억의페이지 logo.png',
+      heroSlides: [
+        '/images/projects/기억의페이지/기억의페이지 포토카드 - 1.png',
+        '/images/projects/기억의페이지/기억의페이지 포토카드 - 2.png',
+        '/images/projects/기억의페이지/기억의페이지 포토카드 - 3.png',
+        '/images/projects/기억의페이지/기억의페이지 포토카드 - 4.png',
+        '/images/projects/기억의페이지/기억의페이지 포토카드 - 5.png',
+        '/images/projects/기억의페이지/기억의페이지 포토카드 - 6.png',
+        '/images/projects/기억의페이지/기억의페이지 포토카드 - 7.png',
+        '/images/projects/기억의페이지/기억의페이지 포토카드 - 8.png',
+        '/images/projects/기억의페이지/기억의페이지 포토카드 - 9.png',
+        '/images/projects/기억의페이지/기억의페이지 포토카드 - 10.png',
+        '/images/projects/기억의페이지/기억의페이지 포토카드 - 11.png',
+      ],
+    },
+  },
+  {
     id: 'climbmate',
     name: 'ClimbMate',
     description: 'AI 기반 클라이밍 문제 분석 웹서비스',
@@ -271,6 +374,7 @@ export const projects: Project[] = [
       diagram: '/images/projects/climbmate/climbmate 아키텍처.png',
     },
     images: {
+      logo: '/images/projects/climbmate/climbmate logo.png',
       screenshots: [
         '/images/projects/climbmate/climbmate 서비스화면 - 1.png',
         '/images/projects/climbmate/climbmate 서비스화면 - 2.png',

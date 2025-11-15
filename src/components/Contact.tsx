@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { FaGithub, FaBlog, FaEnvelope } from 'react-icons/fa'
+import { FaGithub, FaBlog, FaEnvelope, FaLinkedin } from 'react-icons/fa'
 import { HiMail } from 'react-icons/hi'
 
 const Contact = () => {
@@ -17,6 +17,13 @@ const Contact = () => {
       value: 'velog.io/@jeong011010',
       href: 'https://velog.io/@jeong011010/posts',
       color: 'text-green-400',
+    },
+    {
+      icon: FaLinkedin,
+      label: 'LinkedIn',
+      value: 'linkedin.com/in/정훈-김',
+      href: 'https://www.linkedin.com/in/%EC%A0%95%ED%9B%88-%EA%B9%80-b05009343/',
+      color: 'text-blue-500',
     },
     {
       icon: FaEnvelope,
@@ -56,7 +63,7 @@ const Contact = () => {
       </motion.div>
 
       <div className="max-w-4xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {contactInfo.map((contact, index) => {
             const Icon = contact.icon
             return (

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { FaBlog, FaEnvelope, FaGithub } from 'react-icons/fa'
+import { FaBlog, FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa'
 import { HiArrowDown, HiCode } from 'react-icons/hi'
 
 const Hero = () => {
@@ -100,6 +100,17 @@ const Hero = () => {
               title="Velog"
             >
               <FaBlog size={24} />
+            </motion.a>
+            <motion.a
+              href="https://www.linkedin.com/in/%EC%A0%95%ED%9B%88-%EA%B9%80-b05009343/"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.1, y: -5 }}
+              whileTap={{ scale: 0.9 }}
+              className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 hover:text-white hover:bg-blue-600 transition-colors"
+              title="LinkedIn"
+            >
+              <FaLinkedin size={24} />
             </motion.a>
             <motion.a
               href="mailto:jeong01101095@gmail.com"

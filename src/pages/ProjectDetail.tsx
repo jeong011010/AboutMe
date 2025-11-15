@@ -85,20 +85,20 @@ const ProjectDetail = () => {
           <div className="flex items-center gap-6 relative z-10">
             {/* Left: Logo/Image */}
             <div className="flex-shrink-0">
-              {project.images?.heroSlides && project.images.heroSlides.length > 0 ? (
-                <div className="w-24 h-24 rounded-xl bg-white/20 backdrop-blur-md p-2 flex items-center justify-center shadow-lg border border-white/30">
-                  <img 
-                    src={project.images.heroSlides[0]} 
-                    alt={`${project.name} logo`}
-                    className="w-full h-full object-cover rounded-lg"
-                  />
-                </div>
-              ) : project.images?.logo ? (
+              {project.images?.logo ? (
                 <div className="w-24 h-24 rounded-xl bg-white/20 backdrop-blur-md p-2 flex items-center justify-center shadow-lg border border-white/30">
                   <img 
                     src={project.images.logo} 
                     alt={`${project.name} logo`}
                     className="w-full h-full object-contain"
+                  />
+                </div>
+              ) : project.images?.heroSlides && project.images.heroSlides.length > 0 ? (
+                <div className="w-24 h-24 rounded-xl bg-white/20 backdrop-blur-md p-2 flex items-center justify-center shadow-lg border border-white/30">
+                  <img 
+                    src={project.images.heroSlides[0]} 
+                    alt={`${project.name} logo`}
+                    className="w-full h-full object-cover rounded-lg"
                   />
                 </div>
               ) : (

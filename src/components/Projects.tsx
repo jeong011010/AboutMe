@@ -164,8 +164,18 @@ const Projects = () => {
                       }}></div>
                     </div>
                     
-                    {/* Project Image or Icon */}
-                    {(project.images?.thumbnail || (project.images?.heroSlides && project.images.heroSlides.length > 0)) ? (
+                    {/* Project Logo or Image */}
+                    {project.images?.logo ? (
+                      <div className="relative z-10 mb-4 flex justify-center">
+                        <div className="w-24 h-24 rounded-lg bg-white/20 backdrop-blur-sm p-2 flex items-center justify-center shadow-lg border-2 border-white/30">
+                          <img 
+                            src={project.images.logo} 
+                            alt={project.name}
+                            className="w-full h-full object-contain"
+                          />
+                        </div>
+                      </div>
+                    ) : (project.images?.thumbnail || (project.images?.heroSlides && project.images.heroSlides.length > 0)) ? (
                       <div className="relative z-10 mb-4 flex justify-center">
                         <div className="w-20 h-20 rounded-full bg-white/20 backdrop-blur-sm p-1.5 flex items-center justify-center shadow-lg border-2 border-white/30">
                           <img 

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { FaGithub, FaBlog } from 'react-icons/fa'
+import { FaGithub, FaBlog, FaLinkedin } from 'react-icons/fa'
 import { HiCode } from 'react-icons/hi'
 
 const Footer = () => {
@@ -45,6 +45,14 @@ const Footer = () => {
               className="text-gray-400 hover:text-green-400 transition-colors"
             >
               <FaBlog size={24} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/%EC%A0%95%ED%9B%88-%EA%B9%80-b05009343/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-blue-500 transition-colors"
+            >
+              <FaLinkedin size={24} />
             </a>
           </motion.div>
 
