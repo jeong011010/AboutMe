@@ -217,12 +217,18 @@ export const projects: Project[] = [
       '이탈률 약 39% (우수한 수준)',
       '실제 축제 기간 동안 운영된 실서비스',
     ],
+    architecture: {
+      description: 'Next.js 14 App Router 기반 프론트엔드 아키텍처로 구현되었습니다. 모바일 우선 설계(Mobile-first)로 구현되어 있으며, 타임테이블, 부스, 공지사항 등의 정보를 효율적으로 관리합니다. Google Analytics를 통한 데이터 분석 기능도 포함되어 있습니다.',
+      diagram: '/images/projects/wenixia/wenixia-fe 아키텍쳐.png',
+    },
     images: {
+      logo: '/images/projects/wenixia/wenixia logo.png',
       screenshots: [
         '/images/projects/wenixia/weNixia 서비스화면 - 1.png',
         '/images/projects/wenixia/weNixia 서비스화면 - 2.jpg',
         '/images/projects/wenixia/weNixia 서비스화면 - 3.jpg',
       ],
+      architecture: '/images/projects/wenixia/wenixia-fe 아키텍쳐.png',
     },
   },
   {
