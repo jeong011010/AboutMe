@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>TikTok 인증 완료</title>
+  <style>
+    body { font-family: -apple-system, sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; background: #0f0f14; color: #fff; }
+    .card { text-align: center; padding: 40px; background: #1a1a24; border-radius: 20px; max-width: 500px; }
+    h2 { margin-bottom: 12px; }
+    .code { background: #2a2a36; padding: 12px 20px; border-radius: 12px; font-family: monospace; font-size: 14px; word-break: break-all; margin: 16px 0; cursor: pointer; }
+    .code:hover { background: #3a3a46; }
+    .hint { font-size: 12px; color: #888; }
+    .copied { color: #4ade80; font-size: 13px; margin-top: 8px; }
+    .error { color: #f87171; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2 id="title">처리 중...</h2>
+    <div id="content"></div>
+  </div>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get('code');
+    const error = params.get('error');
+    const title = document.getElementById('title');
+    const content = document.getElementById('content');
+
+    if (code) {
+      title.textContent = 'TikTok 인증 완료!';
+      content.innerHTML = `
+        <p class="hint">아래 코드를 대시보드에 붙여넣으세요</p>
+        <div class="code" id="codeBox" onclick="copyCode()">${code}</div>
+        <p class="hint">클릭하면 복사됩니다</p>
+        <p class="copied" id="copiedMsg" style="display:none">복사됨!</p>
+      `;
+    } else if (error) {
+      title.textContent = '인증 실패';
+      title.className = 'error';
+      content.innerHTML = `<p class="error">${params.get('error_description') || error}</p>`;
+    } else {
+      title.textContent = '잘못된 접근';
+      content.innerHTML = '<p class="hint">TikTok OAuth 콜백 페이지입니다.</p>';
+    }
+
+    function copyCode() {
+      navigator.clipboard.writeText(code);
+      document.getElementById('copiedMsg').style.display = 'block';
+      setTimeout(() => document.getElementById('copiedMsg').style.display = 'none', 2000);
+    }
+  </script>
+</body>
+</html>
